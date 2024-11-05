@@ -2,7 +2,12 @@
 
 ### Project Title:Sales Peformance Analysis 
 [Project Oveview](#project_overview)
-
+[Data Sources](#data-sources)
+[Tools Used](#tools-used)
+[Data Cleaning and Preparations](#data-cleaning-and-preparations)
+[Exploratory Data Analysis](#exploratory-data-analysis)
+[Data Analysis](#data-analysis)
+[Data Visualization](#Data-visualization)
 ### Project Oveview
 ---
 This data is to explore sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends.
