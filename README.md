@@ -57,5 +57,5 @@ Excel Formulas used to calculate average per product and sales per region respec
 ![Average sales by product](https://github.com/user-attachments/assets/a8c1fad9-94ee-4c31-9538-a82087d27d64)
 ## Using Excel formulae to calculate total sales per region
 ![using excel formulae to caculate total revenue by region](https://github.com/user-attachments/assets/71195dbf-a8c3-4852-b1e4-a4132c035ba6)
-## Comparative sales analysis showing increase and decline in the sales revenue and quantity sold year 2023 and 2024
+## Comparative sales analysis showing increase and decline in the sales revenue and quantity sold between year 2023 and 2024
 ![Comparative sales analysis](https://github.com/user-attachments/assets/cbfb7457-bb24-4bf5-902e-8e1fad8298f8)
