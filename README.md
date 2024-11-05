@@ -16,3 +16,11 @@ The primary source of data used is LITA Capstone Dataset and this is a dataset d
 - SQL-Structured Query Language for querying of data
 - Power BI for data analysis and visualization
 - Github for Porfolio Building
+
+### Data Cleaning and Preparations
+In the initial phase of the Data cleaning and preparation, I performed the following action;
+1. Data loading and Inspection
+2. Handling missing variables
+3. Data cleaning and formatting
+
+### Exploratory Data Analysis
