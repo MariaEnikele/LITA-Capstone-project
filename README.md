@@ -40,7 +40,9 @@ Enclosed are some of the line of codes/queries used in my analysis
 ```SQL
 SELECT *FROM TABLE1
 WHERE CONDITION= TRUE
-
+Excel Formulas used to calculate average per product and sales per region respectively
+=AVERAGEIF(C2:C50001, "Shoes",H2:H50001)
+=SUMIF(D2:D50001,"South", H2:H50001)
 
 ```
 ### Data Visualization
