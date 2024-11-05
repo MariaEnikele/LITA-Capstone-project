@@ -24,3 +24,8 @@ In the initial phase of the Data cleaning and preparation, I performed the follo
 3. Data cleaning and formatting
 
 ### Exploratory Data Analysis
+EDA involved the exploring of the Data to answer some questions such as;
+- Which is the Top selling product
+- Regional Sales Performance
+- Monthly Sales Trend
+  
