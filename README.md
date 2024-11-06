@@ -83,6 +83,30 @@ FROM
     [dbo].Sales_data
 GROUP BY 
     Product;
+-------Monthly sales totals for 2024-----
+SELECT 
+    MONTH(OrderDate) AS Month,
+    SUM(CAST(Quantity AS INT) * CAST(UnitPrice AS INT)) AS Monthly_Sales
+FROM 
+    [dbo].Sales_data
+WHERE 
+    YEAR(OrderDate) = 2024
+GROUP BY 
+    MONTH(OrderDate)
+ORDER BY 
+    Month;
+
+	-------Top 5 customers by total purchase amount----
+ SELECT 
+    TOP 5 [Customer_Id],
+    SUM(CAST(Quantity AS INT) * CAST(UnitPrice AS INT)) AS Total_Purchase_Amount
+FROM 
+    [dbo].Sales_data
+GROUP BY 
+    [Customer_Id]
+ORDER BY 
+    Total_Purchase_Amount DESC;
+
 
 Excel Formulas used to calculate average per product and sales per region respectively
 =AVERAGEIF(C2:C50001, "Shoes",H2:H50001)
@@ -114,3 +138,9 @@ Excel Formulas used to calculate average per product and sales per region respec
 ![highest selling product by total revenue](https://github.com/user-attachments/assets/04141d54-3315-44e9-8d19-b5c9d5a0dd5b)
 ## Total revenue per product
 ![total revenue by product](https://github.com/user-attachments/assets/347bfc12-2a16-478f-ab59-6517254097ff)
+## Monthly sales for the current year
+![monthly sales for the current year](https://github.com/user-attachments/assets/5bc5d0f9-fbcc-4bbd-b40c-b80b8e4a140c)
+## Top 5 customers by total purchase amount
+![5 top customer purchase](https://github.com/user-attachments/assets/087647d8-4441-43cb-a00e-1f866907399b)
+## Percentage of totalsales contributed by each region
+
