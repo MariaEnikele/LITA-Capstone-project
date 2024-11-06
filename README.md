@@ -106,7 +106,31 @@ GROUP BY
     [Customer_Id]
 ORDER BY 
     Total_Purchase_Amount DESC;
+	---------Percentage of totalsales contributed by each region-----
+SELECT 
+    Region,
+    SUM(CAST(Quantity AS DECIMAL(18,2)) * CAST(UnitPrice AS DECIMAL(18,2))) AS TotalSalesByRegion,
+    (SUM(CAST(Quantity AS DECIMAL(18,2)) * CAST(UnitPrice AS DECIMAL(18,2))) / 
+     (SELECT SUM(CAST(Quantity AS DECIMAL(18,2)) * CAST(UnitPrice AS DECIMAL(18,2))) FROM [dbo].Sales_data)) * 100 
+    AS PercentageOfTotalSales
+FROM 
+    [dbo].Sales_data
+GROUP BY 
+    Region;
 
+	---------------Identify products with no sales-----------
+	SELECT 
+    Product
+FROM 
+    [dbo].Sales_data
+WHERE 
+    Product NOT IN (
+        SELECT DISTINCT Product
+        FROM [dbo].Sales_data
+        WHERE OrderDate >= DATEADD(QUARTER, -1, GETDATE())
+    )
+GROUP BY 
+    Product;
 
 Excel Formulas used to calculate average per product and sales per region respectively
 =AVERAGEIF(C2:C50001, "Shoes",H2:H50001)
@@ -143,4 +167,6 @@ Excel Formulas used to calculate average per product and sales per region respec
 ## Top 5 customers by total purchase amount
 ![5 top customer purchase](https://github.com/user-attachments/assets/087647d8-4441-43cb-a00e-1f866907399b)
 ## Percentage of totalsales contributed by each region
-
+![percentage total sales per region](https://github.com/user-attachments/assets/804cd922-1e19-4788-806e-4d3fc8f35654)
+## Identify products with no sales in the last quarter
+![products with no sales](https://github.com/user-attachments/assets/ab95774e-256c-48fb-96fc-898798247b96)
